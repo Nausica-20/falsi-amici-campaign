@@ -227,3 +227,9 @@ footer h3 {
     .promo-bar { font-size: 0.8rem; padding: 10px; }
     .ad-container { min-height: 250px; max-width: 300px; } /* Adatta banner rettangolare a quadrato su mobile */
 }
+.lang-flag img {
+    display: block;
+    margin: 0 auto 10px auto; /* Centra l'immagine e dà spazio sotto */
+    border-radius: 4px;        /* Arrotonda leggermente gli angoli */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Aggiunge un'ombra leggera professionale */
+}
