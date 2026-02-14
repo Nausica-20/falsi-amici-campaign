@@ -1,0 +1,229 @@
+/* css/style.css */
+
+:root {
+    --babbel-orange: #FF7000;
+    --babbel-dark: #1E3050; /* Blu scuro istituzionale */
+    --white: #FFFFFF;
+    --gray-light: #F6F7F8;
+    --text-color: #333333;
+    --link-gold: #FFD700;
+    --border-color: #DDDDDD;
+}
+
+/* --- RESET & BASE --- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--white);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+/* --- 1. TOP PROMO BAR --- */
+.promo-bar {
+    background-color: var(--babbel-dark);
+    color: var(--white);
+    text-align: center;
+    padding: 12px 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    position: sticky; /* Rimane visibile scrollando? Togli sticky se non vuoi */
+    top: 0;
+    z-index: 100;
+}
+
+.promo-bar a {
+    color: var(--link-gold);
+    text-decoration: underline;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.promo-bar a:hover {
+    color: var(--white);
+}
+
+/* --- 2. HEADER & NAVIGAZIONE --- */
+nav {
+    padding: 20px;
+    background: var(--white);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    text-align: center;
+    position: relative;
+    z-index: 90;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 28px;
+    color: var(--babbel-orange);
+    letter-spacing: -1px;
+}
+
+/* --- 3. HERO SECTION --- */
+.hero {
+    background-color: var(--babbel-orange);
+    color: var(--white);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin: 0 0 15px 0;
+    line-height: 1.1;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    opacity: 0.95;
+}
+
+/* --- 4. BUTTONS (CTA) --- */
+.cta-button {
+    background-color: var(--white);
+    color: var(--babbel-orange);
+    padding: 18px 40px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: inline-block;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    background-color: var(--babbel-dark);
+    color: var(--white);
+}
+
+/* --- 5. CONTENT & ADS --- */
+.content {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Box Pubblicitario Centrale */
+.ad-container {
+    background-color: var(--gray-light);
+    border: 2px dashed #ccc;
+    width: 100%;
+    max-width: 728px; /* Standard Leaderboard */
+    min-height: 90px;
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    color: #999;
+    font-size: 0.8rem;
+    overflow: hidden;
+}
+
+.ad-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* --- 6. LANGUAGE GRID (Index) --- */
+.lang-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+    text-align: left;
+}
+
+.lang-card {
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.lang-card:hover {
+    border-color: var(--babbel-orange);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.lang-flag {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.lang-title {
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: var(--babbel-dark);
+    margin-bottom: 10px;
+}
+
+.lang-link {
+    color: var(--babbel-orange);
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: auto; /* Spinge il link in basso se le card hanno altezze diverse */
+}
+
+/* --- 7. FOOTER & DISCLOSURE --- */
+footer {
+    background: var(--gray-light);
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: 80px;
+    border-top: 1px solid var(--border-color);
+}
+
+footer h3 {
+    color: var(--babbel-dark);
+    margin-bottom: 10px;
+}
+
+/* Stile specifico per Affiliate Disclosure */
+.affiliate-disclosure {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    font-size: 0.8rem;
+    color: #777;
+    line-height: 1.5;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.affiliate-disclosure strong {
+    color: #555;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 600px) {
+    .hero h1 { font-size: 2.2rem; }
+    .hero p { font-size: 1.1rem; }
+    .promo-bar { font-size: 0.8rem; padding: 10px; }
+    .ad-container { min-height: 250px; max-width: 300px; } /* Adatta banner rettangolare a quadrato su mobile */
+}
